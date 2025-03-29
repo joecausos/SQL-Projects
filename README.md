@@ -3,7 +3,7 @@ SQL project for analyzing border crossing data with various queries.
 
 This project contains SQL queries for analyzing border crossing data. The queries are organized into different categories based on the type of analysis they perform.
 
-## categories of analysis
+## Categories of analysis
 - General analysis
 - Temporal analysis
 - Mode of Transportation analysis
