@@ -34,7 +34,7 @@ This project contains SQL queries for analyzing border crossing data. The querie
 - Comparative analysis 
   - How do border crossings compare between weekdays and weekends?
   - How do border crossings compare between different times of the day (e.g. morning, afternoon, evening)?
-     
+    
 - Data quality and Completeness
   - Are there any missing or incomplete records in the dataset?
 
@@ -52,7 +52,20 @@ Please note that the dataset used in this project is not owned by the repository
 
 ## Getting Started
 
+Creating a table for data analysis.
+'''sql
+
+CREATE TABLE border_crossing 
+(
+	port_name VARCHAR(50),
+	state VARCHAR(50),
+	por_code VARCHAR(50),
+	boder VARCHAR(100),
+	date DATE,
+	measure VARCHAR(50),
+	value VARCHAR(50)
+);
+'''
 
 
-1. General Analysis
 
