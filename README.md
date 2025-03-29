@@ -38,7 +38,7 @@ This project contains SQL queries for analyzing border crossing data. The querie
 - Data quality and Completeness
   - Are there any missing or incomplete records in the dataset?
 
-## The dataset used in this project was downloaded from [data.gov] (https://data.gov/) and is meant for learning and educational purposes.
+## The dataset used in this project was downloaded from data.gov (https://data.gov/) and is meant for learning and educational purposes.
 
 ## How to Run the Queries
 1. Clone the repository to your local machine.
