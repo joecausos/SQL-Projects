@@ -5,6 +5,10 @@ This project contains SQL queries for analyzing border crossing data. The querie
 
 ## Categories of analysis
 - General analysis
+  - How many total border crossings are recorded in the dataset?
+  - What is the distribution of border crossing by year and month?
+  - Which border has the highest number of crossing?
+  - What are the top 5 ports of entry with
 - Temporal analysis
 - Mode of Transportation analysis
 - Port of Entry analysis
@@ -22,3 +26,12 @@ This project contains SQL queries for analyzing border crossing data. The querie
 
 ## License
 Please note that the dataset used in this project is not owned by the repository owner and is used solely for educational purposes.
+
+***
+
+## Getting Started
+
+
+
+1. General Analysis
+
