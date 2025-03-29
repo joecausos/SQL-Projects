@@ -55,6 +55,10 @@ Please note that the dataset used in this project is not owned by the repository
 Creating a table for data analysis.
 '''sql
 
+
+'''
+
+```sql
 CREATE TABLE border_crossing 
 (
 	port_name VARCHAR(50),
@@ -65,7 +69,7 @@ CREATE TABLE border_crossing
 	measure VARCHAR(50),
 	value VARCHAR(50)
 );
-'''
+```
 
 
 
