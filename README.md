@@ -53,11 +53,6 @@ Please note that the dataset used in this project is not owned by the repository
 ## Getting Started
 
 Creating a table for data analysis.
-'''sql
-
-
-'''
-
 ```sql
 CREATE TABLE border_crossing 
 (
