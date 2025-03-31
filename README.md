@@ -1,4 +1,4 @@
-## This project analyzes U.S. Border Crossing data from Data.gov, leveraging SQL to extract insights. The dataset contains information on people, vehicles, and cargo crossings, categorized by border, port of entry, transportation mode, and time.
+## This project analyzes U.S. Border Crossing data from Data.gov, leveraging SQL to extract insights. The dataset contains information on vehicles, and cargo crossings, categorized by border, port of entry, transportation mode, and time.
 
 Tools & Technologies
 Database: PostgreSQL
