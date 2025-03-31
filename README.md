@@ -1,5 +1,3 @@
-# sql-border-crossing-analysis
-
 This project contains SQL queries for analyzing border crossing data. The queries are organized into different categories based on the type of analysis they perform.
 
 ## Categories of analysis
@@ -46,8 +44,9 @@ The dataset used in this project was downloaded from data.gov (https://data.gov/
 
 ## Get Started by Creating Table for Data Analysis
 
-	```sql
-	CREATE TABLE border_crossing 
+```sql
+
+CREATE TABLE border_crossing 
 	(
 		port_name VARCHAR(50),
 		state VARCHAR(50),
@@ -56,9 +55,8 @@ The dataset used in this project was downloaded from data.gov (https://data.gov/
 		date DATE,
 		measure VARCHAR(50),
 		value VARCHAR(50)
-	);
-	```
-
+	);	
+```
 
 ### General Analysis
 
@@ -108,8 +106,7 @@ The dataset used in this project was downloaded from data.gov (https://data.gov/
 	GROUP BY EXTRACT(YEAR FROM date), EXTRACT(MONTH FROM date)
 	ORDER BY YEAR, MONTH;
 	
-	-- Analyzing the distribution by year and month can reveail trends and patterns over time,
-	-- such as increasing or decreasing in border crossing.
+	-- Analyzing the distribution by year and month can reveail trends and patterns over time, such as increasing or decreasing in border crossing.
 	```
 
 
@@ -160,3 +157,62 @@ The dataset used in this project was downloaded from data.gov (https://data.gov/
  	GROUP BY bc.measure
  	ORDER BY mode_of_transpo DESC;
 
+ 	-- Validating the modes of transportation used for crossing the border can provide insights for advancements (e.g. Insfrastructure needs and travelers prefernces).
+ 	```
+
+
+## Temporal Analysis
+
+- What are the trends in border crossing over time (Increase or Descrease)?
+
+ 	Expected Result:
+
+	| year | ttl_border_crossing 	|
+	| ---- | -------------------	|
+	| 1996 |	14832		|
+	| 1997 |	14832		|
+	| 1998 | 	14832		|
+	| 1999 | 	14832		|
+	| 2000 | 	14832		|
+	| 2001 |	14832		|
+	| 2002 |	14832		|
+	| 2003 |	15588		|
+	| 2004 |	15984		|
+	| 2005 | 	16128		|
+	| 2006 | 	16128		|
+	| 2007 |	16056		|
+	| 2008 |	16056		|
+	| 2009 |	16056		|
+	| 2010 | 	16200		|
+	| 2011 | 	15840		|
+	| 2012 |	15840		|
+	| 2013 | 	15840		|
+	| 2014 |	15840		|
+	| 2015 | 	15984		| 
+	| 2016 | 	13754		|
+	| 2017 | 	9717		|
+	| 2018 | 	9529		|
+	| 2019 | 	9588		|
+	| 2020 | 	8477		|
+	| 2021 | 	8430		|
+	| 2022 | 	8876		|
+	| 2023 | 	9087		|
+	| 2024 | 	9087		|
+	| 2025 | 	1497		|
+
+	Answer:
+
+	```sql
+ 	SELECT EXTRACT (YEAR FROM date) AS year, COUNT(*) ttl_border_crossing
+ 	FROM border_cross bc
+ 	GROUP BY EXTRACT(YEAR FROM date
+ 	ORDER BY year;
+ 
+ 	-- Observing trends over time can help indicate peak travel and help in planning for resource allocation.
+ 	```
+
+- Are there any seasonal patterns in border crossing (e.g. higher in summer, lower in winter)?
+
+	Expected Result:
+
+  
