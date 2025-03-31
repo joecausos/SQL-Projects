@@ -5,7 +5,7 @@ This project contains SQL queries for analyzing border crossing data. The querie
 ## Categories of analysis
 - General analysis
   - How many total border crossings are recorded in the dataset?
-  - What is the to 10 distribution of border crossing by year and month?
+  - What is the distribution of border crossing by year and month?
   - Which border has the highest number of crossing?
   - What are the top 5 ports of entry with the highest number of crossings?
   - How does the number of border crossing vary by mode of transportation? 
@@ -64,57 +64,60 @@ CREATE TABLE border_crossing
 
 - How many total border crossings are recorded in the dataset?
 
-	Expected results:
+Expected results:
 
-	| ttl_border_crossing |
-	| ------------------- |
-	| 399,406             |
+| ttl_border_crossing |
+| ------------------- |
+| 399,406             |
+
+
+Answer:
+
+```sql
+SELECT COUNT(*) AS ttl_border_crossing
+FROM border_crossing bc;
+
+-- By understanding the overall volumeof border crossing helps gauge the scale of the data
+-- and provide a baseline for further analysis.
+```
+
+
+
+- What is the distribution of border crossing by year and month?
+  Expected results:
+  | year | month | ttl_border_cross |
+  | ---- | ----- | ---------------- |
+  | 1996 | 1     | 1236             |
+  | 1996 | 2     | 1236             |
+  | 1996 | 3     | 1236             |
+  | 1996 | 4     | 1236             |
+  | 1996 | 5     | 1236             |
+  | 1996 | 6     | 1236             |
+  | ...  | ...   | ...              |
+  | 2025 | 2     | 748              |
 	
-	
-	Answer:
+Answer:
 
-	```sql
-	SELECT COUNT(*) AS ttl_border_crossing
-	FROM border_crossing bc;
-	
-	-- By understanding the overall volumeof border crossing helps gauge the scale of the data
-	-- and provide a baseline for further analysis.
-	```
+```sql
+SELECT EXTRACT(YEAR FROM date) as year,
+	EXTRACT (MONTH FROM date) as month,
+	COUNT (*) as ttl_border_crossing
+FROM border_crossing bc
+GROUP BY EXTRACT(YEAR FROM date), EXTRACT(MONTH FROM date)
+ORDER BY YEAR, MONTH;
 
-
-- What is the top 10 distribution of border crossing by year and month?
-
-	Expected results:
-
-	| year | month | ttl_border_cross |
-	| ------------------------------- |
-	| 1996 | 1     | 1236             |
-	| 1996 | 2     | 1236             |
-	| 1996 | 3     | 1236             |
-	| 1996 | 4     | 1236             |
-	| 1996 | 5     | 1236             |
-	| 1996 | 6     | 1236             |
-	| ...  | ...   | ...              |
-	| 2025 | 2     | 748              |
-
-
-	
-	Answer:
-
-	```sql
-	SELECT EXTRACT(YEAR FROM date) as year,
- 		EXTRACT (MONTH FROM date) as month,
- 		COUNT (*) as ttl_border_crossing
- 	FROM border_crossing bc
- 	GROUP BY EXTRACT(YEAR FROM date), EXTRACT(MONTH FROM date)
- 	ORDER BY YEAR, MONTH;
-
- 	-- Analyzing the distribution by year and month can reveail trends and patterns over time,
- 	-- such as increasing or decreasing in border crossing.
-	```
-
+-- Analyzing the distribution by year and month can reveail trends and patterns over time,
+-- such as increasing or decreasing in border crossing.
+```
 
 
 - Which border has the highest number of crossing?
+  Expected Result:
+  
+  | border | ttl_border_cross |
+  | ------ | ---------------- |
+| 1996 | 1     | 1236             |
+
+
 - What are the top 5 ports of entry with the highest number of crossings?
 - How does the number of border crossing vary by mode of transportation? 
