@@ -49,7 +49,7 @@ Please note that the dataset used in this project is not owned by the repository
 
 ***
 
-## Getting Started
+## Get Started by Creating Table for Data Analysis
 
 Creating a table for data analysis.
 ```sql
@@ -65,5 +65,25 @@ CREATE TABLE border_crossing
 );
 ```
 
+
+### General Analysis
+
+How many total border crossings are recorded in the dataset?
+
+
+Expected results:
+
+| ttl_border_crossing |
+| ------------------- |
+| 399,406             |
+
+
+Answer:
+
+```sql
+SELECT COUNT(*) AS ttl_border_crossing
+FROM border_crossing bc;
+    
+```
 
 
