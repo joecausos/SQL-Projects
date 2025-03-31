@@ -167,7 +167,7 @@ CREATE TABLE border_crossing
 
  	Expected Result:
 
-	| year | ttl_border_crossing 	|
+	| year | ttl_YoY_border_crossing |
 	| ---- | -------------------	|
 	| 1996 |	14832		|
 	| 1997 |	14832		|
@@ -203,7 +203,7 @@ CREATE TABLE border_crossing
 	Answer:
 
 	```sql
- 	SELECT EXTRACT (YEAR FROM date) AS year, COUNT(*) ttl_border_crossing
+ 	SELECT EXTRACT (YEAR FROM date) AS year, COUNT(*) ttl_YoY_border_crossing
  	FROM border_cross bc
  	GROUP BY EXTRACT(YEAR FROM date
  	ORDER BY year;
@@ -214,5 +214,20 @@ CREATE TABLE border_crossing
 - Are there any seasonal patterns in border crossing (e.g. higher in summer, lower in winter)?
 
 	Expected Result:
+
+| month | 
+1	34011
+2	34083
+3	33260
+4	33231
+5	33389
+6	33448
+7	33408
+8	32998
+9	32994
+10	32965
+11	32829
+12	32790
+
 
   
