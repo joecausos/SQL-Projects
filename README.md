@@ -1,10 +1,10 @@
 ## This project analyzes U.S. Border Crossing data from Data.gov, leveraging SQL to extract insights. The dataset contains information on vehicles, and cargo crossings, categorized by border, port of entry, transportation mode, and time.
 
-Tools & Technologies
-Database: PostgreSQL
-SQL IDE: DBeaver
-Visualization: Power BI (Coming soon)
-Data Source: Border Crossing Entry Data
+- Tools & Technologies
+- Database: PostgreSQL
+- SQL IDE: DBeaver
+- Visualization: Power BI (Coming soon)
+- Data Source: Border Crossing Entry Data
 
 ## Categories of analysis
 - General analysis
