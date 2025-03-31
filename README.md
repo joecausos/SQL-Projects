@@ -238,9 +238,4 @@ CREATE TABLE border_crossing
    	FROM border_crossing bc
    	GROUP BY EXTRACT (MONTH from date)
    	ORDER BY month;
-
-
-
-
-   
-
+   	```
