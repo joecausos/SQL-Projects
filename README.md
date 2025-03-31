@@ -1,4 +1,4 @@
-This project contains SQL queries for analyzing border crossing data. The queries are organized into different categories based on the type of analysis they perform.
+# This project contains SQL queries for analyzing border crossing data. The queries are organized into different categories based on the type of analysis they perform.
 
 ## Categories of analysis
 - General analysis
@@ -58,7 +58,7 @@ CREATE TABLE border_crossing
 	);	
 ```
 
-### General Analysis
+## General Analysis
 
 - How many total border crossings are recorded in the dataset?
 
@@ -215,19 +215,32 @@ CREATE TABLE border_crossing
 
 	Expected Result:
 
-| month | 
-1	34011
-2	34083
-3	33260
-4	33231
-5	33389
-6	33448
-7	33408
-8	32998
-9	32994
-10	32965
-11	32829
-12	32790
+	|month|seasonal_mom_trend|
+	|-----|------------------|
+	|    1|             34011|
+	|    2|             34083|
+	|    3|             33260|
+	|    4|             33231|
+	|    5|             33389|
+	|    6|             33448|
+	|    7|             33408|
+	|    8|             32998|
+	|    9|             32994|
+	|   10|             32965|
+	|   11|             328b9|
+	|   12|             32790|
 
 
-  
+  	Answer:
+
+  	```sql
+	SELECT EXTRACT (MONTH FROM date) AS month, COUNT(*) ttl_MoM_border_crossing
+   	FROM border_crossing bc
+   	GROUP BY EXTRACT (MONTH from date)
+   	ORDER BY month;
+
+
+
+
+   
+
