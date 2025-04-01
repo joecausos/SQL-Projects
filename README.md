@@ -43,10 +43,6 @@
 
 ***
 
-The dataset used in this project was downloaded from data.gov (https://data.gov/) and is meant for learning and educational purposes.
-
-
-***
 
 ## Get Started by Creating Table for Data Analysis
 
