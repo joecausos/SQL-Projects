@@ -31,12 +31,8 @@
 - Event-Based analysis
   - Are there any significant events or policy changes that have affected border crossings?
     
-- Anomalies and Outliers
-  - Are there any anomalies or outliers in the border crossing data?
-    
 - Comparative analysis 
   - How do border crossings compare between weekdays and weekends?
-  - How do border crossings compare between different times of the day (e.g. morning, afternoon, evening)?
     
 - Data quality and Completeness
   - Are there any missing or incomplete records in the dataset?
@@ -523,7 +519,52 @@ CREATE TABLE border_crossing
 	```
 
 ***
-## Anomalies and Outliers
+##  Comparative Analysis:
+
+- How do border crossings compare between weekdays and weekends?
+	
+	### Expected Result:
+	
+	| day_type | ttl_crossing |
+	| -------- | ------------ |
+	| Weekday  |      285041  |
+	| Weekend  |      114365  |
+	
+	### Answer: 
+	```sql
+	SELECT CASE 
+		       WHEN EXTRACT(DOW FROM date) IN (0, 6) THEN ' Weekend'
+		       ELSE 'Weekday'
+	    END AS day_type, COUNT(*) AS ttl_crossing
+	
+	FROM border_crossing bc
+	GROUP BY day_type
+	ORDER BY ttl_crossing DESC;
+	
+	-- Comparing weekdays and weekends can reveal differences in travel patterns and peak times.
+	```
 
 
+***
+##  Data Quality
+- Are there any imcomplete records in the dataset?
 
+	### Expected Result
+	
+![image](https://github.com/user-attachments/assets/2c1986f3-b8d7-451b-a8c8-74db29bde5a0)
+	
+	
+	### Answer:
+	
+	```sql
+	SELECT 
+	FROM border_crossing
+	WHERE port_name IS NULL
+	   OR state IS NULL
+	   OR port_code IS NULL
+	   OR border IS NULL
+	   OR date IS NULL
+	   OR measure IS NULL
+
+	-- Assessing data quality is crucial for accurate analysis and decision-making.
+	```
