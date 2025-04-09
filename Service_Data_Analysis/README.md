@@ -25,7 +25,7 @@ In this analysis, we seek to answer the following key questions. Each question i
 
 ---
 
-### 1. **What is the "No Trouble Found" (NTF) rate?**
+### 1. **What is the "UIC" rate?**
 
 A crucial question for understanding whether customers are returning devices without an actual fault. This helps identify possible inefficiencies in the return process and areas where customer education or product documentation might be needed.
 
