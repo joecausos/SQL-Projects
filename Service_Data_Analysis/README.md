@@ -19,7 +19,7 @@ This project applies Six Sgima principles to analyze  customer service-related d
 
 ## Project Purpose
 
-The primary goal of this project is to transform raww operational data into meanungful insights that guide strategic and tactical decisions. By identifying inefficiencies and recurring issues in service processes, the project aims to:
+The primary goal of this project is to transform raw operational data into meaningful insights that guide strategic and tactical decisions. By identifying inefficiencies and recurring issues in service processes, the project aims to:
 - Improve Product Quality: Detect and resolve underlying issues impacting reliability.
 - Optimize Service Processes: Enhannce the efficiency of service workflows and reduce turnaround time.
 - Reduce Unnecessary Field Return: Pinpoint and address cases of "Unverified Issue Cases (UIC) and External Impact Case (EIC).
@@ -36,7 +36,7 @@ Six sigma is a proven methodology for improving process efficiency and reducing 
 - Data-Driven Decision Making: Use quantitative insights to prioritize improvements.
 
 ### Why Use SQL for Six Sigma Data Analysis?
-SQL is a powerfultool for quereying and analyzing data strored in a relational databases. Here's why SQL is an excellent choice for Six Sigma projects:
+SQL is a powerfultool for quereying and analyzing data stored in a relational databases. Here's why SQL is an excellent choice for Six Sigma projects:
 - Scalability: SQL handle large datasets efficiently, which is crucial for enterprise-level data analysis.
 - Flexibility: Supports a whole ride range of tasks, from basic aggregations to advanced analysis using window function, recursive queris, and complex joins.
 - Real-Time Insights: Enables direct querying of live operational databases, providing real-time updates on key performance indicators (KPIs).
@@ -44,19 +44,19 @@ SQL is a powerfultool for quereying and analyzing data strored in a relational d
 
 ### Why Not Minitab for Data Analysis?
 
-Minitab isa a valuable statistical tool, but it has limitations compared to SQL for operational data analysis:
+Minitab is a valuable statistical tool, but it has limitations compared to SQL for operational data analysis:
 - Data Size: Minitab is not optimized for large-scale datasets, whereas SQL excels at largedata volumes.
 - Real-Time Analysis: SQL allows live data querying,while Minitab typicall requires pre-exported datasets.
 - Automation and Integration:  SQL queries can be automated and integrated into workflows and dashboards. Minitab is primarily suited for ad-hoc analysis.
 - Cost: SQL is often free or included in existing database system, whereas Minitab requires licensing.
 
-However, Minitab remains usefil for tasks like hypothesis testingm ANOBA, and control charting, complementing SQL for specific statistical needs.
+However, Minitab remains useful for tasks like hypothesis testingm ANOVA, and control charting, complementing SQL for specific statistical needs.
 
 ---
 
 ## Six Sigma Framework
 
-THis project is structured around Six Sigma;s DMAIC methodology:
+This project is structured around Six Sigma's DMAIC methodology:
 
 1. Define: Establish objectives and identify critical metrics for quality improvement.  
 2. Measure: Collect relevant data and compute key performance indicators (KPIs).  
@@ -73,7 +73,7 @@ The project addresses the following key questions, categorized by the complexity
 
 ### Basic SQL Analysis
 
-1. WHat is the "Unverfied Issue Cases (UIC) rate?
+1. WHat is the "Unverified Issue Cases (UIC) rate?
 2. WHat are the field failure trends over time?
 3. WHat is the rate of External Impact Case (EIC)?
 4. Are there repeat return for the same device based on device id?
@@ -81,6 +81,20 @@ The project addresses the following key questions, categorized by the complexity
 6. What is the Mean Time Between Failures (MTBF)?
 7. What is the relationship between field failure rate and customer origin?
 
+
+### Intermediate SQL Analysis
+1. What is the cumulative failure rate over time?
+2. What are the top 10 failure description by frequency?
+3. Which customer ares responsible for the highest return rates?
+4. What is the average time to finish device service by failure type?
+5. How do warranty claims difer by product category?
+
+
+### Advance SQL Analysis
+1. What is the pareto analysis of failure types?
+2. What is the trend of failure rates using a rolling average?
+3. Which failure type have the highest correlation with early failures?
+4. How can we identify seasonal patterns in failure trends?
 
 
 
