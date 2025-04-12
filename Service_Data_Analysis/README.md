@@ -87,216 +87,192 @@ The project addresses the following key questions, categorized by the complexity
 
 ### Basic SQL Analysis
 
-**1. What is the "Unverified Issue Cases (UIC) rate?**
-Purpose: To measure inefficiencies in the return process by identifying returns labeled as "Unverified Issue Cases".
+1. **What is the "Unverified Issue Cases (UIC) rate?**
 
-**EXPECTED RESULT:**
+   Purpose: To measure inefficiencies in the return process by identifying returns labeled as "Unverified Issue Cases".
 
-| uic_rate | 
-| -------- |
-| 6.193%   |
+   **EXPECTED RESULT:**
+   | uic_rate |
+   | -------- |
+   | 6.193%   |
 
-**SOLUTION:**
-    
-``` sql
+   **SOLUTION:**
 
-SELECT ROUND(
+   ``` sql
+   SELECT ROUND(
             COUNT(
                 CASE
                     WHEN category ='UIC' THEN 1
                 END
                 ) * 100.0 / (COUNT(*), 3
             ) || '%' AS UIC_Rate
+   FROM staging_table st;
+   ```
+   **After understanding the UIC rate, the next step is to evaluate failure trends over time to assess whether quality improvements are effective.**
 
-FROM staging_table st;
+2. **WHat are the field failure trends over time?**
 
-```
+   Purpose: To identify seasonal patterns or long-term trends in failure rates, aiding in quality improvement efforts.
 
-After understanding the UIC rate, the next step is to evaluate failure trends over time to assess whether quality improvements are effective.
-    
-**2. WHat are the field failure trends over time?** 
-Purpose: To identify seasonal patterns or long-term trends in failure rates, aiding in quality improvement efforts.
+   **EXPECTED RESULT:**
 
-**EXPECTED RESULT:**
-    
-| year|month|total_returns    |defective_returns_within_90D|
-| ----|-----|-----------------|-----------------|
-| 2020|    1|               11|                0|
-| 2020|    3|                9|                0|
-| 2020|    5|               16|                0|
-| 2020|    6|               26|                0|
-| 2020|    7|               35|                2|
-| 2020|    8|               13|                1|
-| 2020|    9|               57|                0|
-| 2020|   10|               29|                0|
-| 2020|   11|              144|                1|
-| 2020|   12|             5630|                1|
-| 2021|    1|            11650|                0|
-| 2021|    2|             8739|                1|
-| 2021|    3|            10222|                1|
-| 2021|    4|             6495|                0|
-| ... |	...	| ...			  | ...				|
-| ... |	...	| ...			  | ...				|
-| ... |	...	| ...			  | ...				|
-| 2024|    7|            29924|             2427|
-| 2024|    8|            30973|             2729|
-| 2024|    9|            23989|             2182|
-| 2024|   10|            30954|             2562|
-| 2024|   11|            26677|             2195|
-| 2024|   12|            25301|             2062|
-| 2025|    1|            68735|             6081|
-| 2025|    2|            32079|             1929|
-| 2025|    3|             8949|              478|
+   | year|month|total_returns    |defective_returns_within_90D|
+   | ----|-----|-----------------|-----------------|
+   | 2020|    1|               11|                0|
+   | 2020|    3|                9|                0|
+   | 2020|    5|               16|                0|
+   | 2020|    6|               26|                0|
+   | 2020|    7|               35|                2|
+   | 2020|    8|               13|                1|
+   | 2020|    9|               57|                0|
+   | 2020|   10|               29|                0|
+   | 2020|   11|              144|                1|
+   | 2020|   12|             5630|                1|
+   | 2021|    1|            11650|                0|
+   | 2021|    2|             8739|                1|
+   | 2021|    3|            10222|                1|
+   | 2021|    4|             6495|                0|
+   | ... |	... | ...             | ...		|
+   | ... |	... | ...             | ...		|
+   | ... |	... | ...             | ...		|
+   | 2024|    7|            29924|             2427|
+   | 2024|    8|            30973|             2729|
+   | 2024|    9|            23989|             2182|
+   | 2024|   10|            30954|             2562|
+   | 2024|   11|            26677|             2195|
+   | 2024|   12|            25301|             2062|
+   | 2025|    1|            68735|             6081|
+   | 2025|    2|            32079|             1929|
+   | 2025|    3|             8949|              478|
 
-**SOLUTION:**
-    
-```sql
+   **SOLUTION:**
 
-SELECT 
-    EXTRACT (YEAR FROM request_date) AS YEAR,
-    EXTRACT (MONTH FROM request_date) AS MONTH,
-    COUNT (*) AS ttl_field_failure_returns,
-    COUNT (CASE WHEN rma_remarks = '4-Fail<90' THEN 1 END) AS defective_returns
-        
-FROM staging_table st 
-GROUP BY YEAR,MONTH 
-ORDER BY YEAR, MONTH ;
+   ```sql
+   SELECT
+   	EXTRACT (YEAR FROM request_date) AS YEAR,
+    	EXTRACT (MONTH FROM request_date) AS MONTH,
+     	COUNT (*) AS ttl_field_failure_returns,
+	COUNT (CASE WHEN rma_remarks = '4-Fail<90' THEN 1 END) AS defective_returns
+   FROM staging_table st
+   GROUP BY YEAR,MONTH
+   ORDER BY YEAR, MONTH ;
 
-```
+   ```
 
-With the failure trends established, focus shifts to understand the External Impact Cases (EIC) to identify potential issues.
+   **With the failure trends established, focus shifts to understand the External Impact Cases (EIC) to identify potential issues.**
 
-**3. WHat is the rate of External Impact Case (EIC)?** 
-Purpose: To measure the percentage of returns caused by external impact misuse, highlighting potential exchange of best practices or product design changes.
+4. **WHat is the rate of External Impact Case (EIC)?**
+   Purpose: To measure the percentage of returns caused by external impact misuse, highlighting potential exchange of best practices or product design changes.
 
-**EXPECTED REUSLT:**
+   **EXPECTED REUSLT:**
 
-| eic_rate |
-| -------- |
-| 28.198%  | 
+   | eic_rate |
+   | -------- |
+   | 28.198%  |
 
-**SOLUTION:**
+   **SOLUTION:**
 
-```sql
+   ```sql
 
-SELECT
+   SELECT
     ROUND(
         COUNT(
             CASE
                 WHEN category = 'EIC' THEN 1
             END ) * 100.0 / COUNT(*), 3
         ) || '%' AS eic_rate
+   FROM staging_table;
 
-FROM staging_table;
+   ```
+   Understanding External Issue EIC rates sets the stage for analyzing recurring returns, which can highlight systemic quality issues.
 
-```
+5. **Are there repeat return for the same device based on device id**
+   Purpose: To identify recurring defects or systemic issues in product quality by analyzing device id with muutiple returns.
 
-Understanding External Issue EIC rates sets the stage for analyzing recurring returns, which can highlight systemic quality issues.
+   **EXPECTED RESULT:**
 
+   |device_id | repeat_return|
+   |--------- | ------------|
+   |7790385A35|           13|
+   |D7A72A927E|           12|
+   |8DDB357183|           12|
+   |335FF20F13|           11|
+   |806E092F0E|           11|
+   |DF60E219F3|           10|
+   |3FDCBBB3CF|           10|
+   |C6D1269E90|           10|
+   |1397427CD3|           10|
+   |D9DDA3C8BA|           10|
+   |8D1C95B90C|           10|
+   |6EA9099336|            9|
+   |86F6B0F85D|            9|
+   |F51D5A8A17|            9|
+   |040AE1360C|            9|
+   |003E41A94C|            9|
+   | ...      | ...         |
+   |F05DB8AB95|            2|
+   |8C3C2E8558|            2|
+   |FB123F98B9|            2|
+   |2ECC28FBED|            2|
+   |CF0DC92FCD|            2|
 
-**4. Are there repeat return for the same device based on device id**
-Purpose: To identify recurring defects or systemic issues in product quality by analyzing device id with muutiple returns.
+   **SOLUTION:**
 
-**EXPECTED RESULT:**
+   ```sql
+   SELECT
+   	device_id,
+   	COUNT(*) AS repeat_return
+   
+   FROM staging_table st
+   GROUP BY device_id
+   HAVING COUNT(*)  > 1
+   ORDER BY repeat_return DESC;
 
-|device_id | repeat_return|
-|--------- | ------------|
-|7790385A35|           13|
-|D7A72A927E|           12|
-|8DDB357183|           12|
-|335FF20F13|           11|
-|806E092F0E|           11|
-|DF60E219F3|           10|
-|3FDCBBB3CF|           10|
-|C6D1269E90|           10|
-|1397427CD3|           10|
-|D9DDA3C8BA|           10|
-|8D1C95B90C|           10|
-|6EA9099336|            9|
-|86F6B0F85D|            9|
-|F51D5A8A17|            9|
-|040AE1360C|            9|
-|003E41A94C|            9|
-| -------- | ----------- |
-| -------- | ----------- |
-| -------- | ----------- |
-|F05DB8AB95|            2|
-|8C3C2E8558|            2|
-|FB123F98B9|            2|
-|2ECC28FBED|            2|
-|CF0DC92FCD|            2|
+   ```
+   **After identifying recurring returns, we next evaluate early failures, which are strong indicators of product quality issues.**
 
-**SOLUTION:**
+6. **What is the rate of early field failures?**
+   Purpose: To quantify early failures and assess assembly or design defects within the first 90 days of use.
 
-```sql
+   **EXPECTED RESULT:**
 
-SELECT device_id, COUNT(*) AS repeat_return
-	
-FROM staging_table st 
-GROUP BY device_id 
-HAVING COUNT(*)  > 1
-ORDER BY repeat_return DESC;
+   |early_failure_rate|
+   |------------------|
+   |10.630%           |
 
-```
+   **SOLUTION:**
+   ``` sql
 
-After identifying recurring returns, we next evaluate early failures, which are strong indicators of product quality issues.
-
-**5. What is the rate of early field failures?**
-Purpose: To quantify early failures and assess assembly or design defects within the first 90 days of use.
-
-**EXPECTED RESULT:**
-
-|early_failure_rate|
-|------------------|
-|10.630%           |
-
-**SOLUTION:**
-
-``` sql
-
-SELECT ROUND(	
+   SELECT ROUND(	
 		COUNT(
 			CASE 
 				WHEN  (request_date - last_shipment) <= 90 THEN 1 
 			END 
 		) * 100.0 / COUNT(*), 3 
 	) || '%' AS early_failure_rate
-		
-FROM staging_table st ;
-```
+   FROM staging_table st ;
 
-**Transition: After early failures have been assessed, the next focus is on calculating the Mean Time Between Failures (MTBF) to understand product reliability.**
+   ```
+   **After early failures have been assessed, the next focus is on calculating the Mean Time Between Failures (MTBF) to understand product reliability.**
 
-#### 6. What is the Mean Time Between Failures (MTBF)?
-Purpose: To calculate the average time between failures for devices, a critical metric for reliability and warranty policies.
+7. **What is the Mean Time Between Failures (MTBF)?**
+   Purpose: To calculate the average time between failures for devices, a critical metric for reliability and warranty policies.
 
-**EXPECTED RESULT:**
+   **EXPECTED RESULT:**
 
-|mtbf               |
-|-------------------|
-|45.0832170584236700|
+   |mtbf               |
+   |-------------------|
+   |45.0832170584236700|
 
-**SOLUTION**
+   **SOLUTION**
+   ```sql
+   SELECT 
+	AVG(request_date - last_shipment) AS mtbf
 
-```sql
+   FROM staging_table st
+   WHERE rma_remarks = '4-Fail<90';
 
-SELECT 
-	AVG(request_date - last_shipment) AS mtbf 
-
-FROM staging_table st 
-WHERE rma_remarks = '4-Fail<90';
-
-```
-
-After calculating MTBF, we analyze the relationship between failure rates and customer origin to identify regional patterns.
-
-#### 7. What is the relationship between field failure rate and customer origin?
-Purpose: To analyze failure rates by customer origin, helping tailor customer support and warranty policies based on regional performance.
-
-**EXPECTED RESULT:**
-
-
-**SOLUTION:**
+   ```
 
 
 ### Intermediate SQL Analysis
