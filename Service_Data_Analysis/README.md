@@ -51,6 +51,13 @@ Minitab is a valuable statistical tool, but it has limitations compared to SQL f
 - **Automation and Integration:**  SQL queries can be automated and integrated into workflows and dashboards. Minitab is primarily suited for ad-hoc analysis.
 - **Cost:** SQL is often free or included in existing database system, whereas Minitab requires licensing.
 
+| Criteria 	     | SQL			       | Minitab 			  |
+| ------------------ | ------------------------------- | -------------------------------- |
+| Data Size          | Excellent for large datasets    | Limited to small/medium datasets |
+| Real-Time Analysis | Yes                             | No (requires data export)        |
+| Automation         | Easy to automate via scripts    | Mostly manual                    |
+| Cost               | Often free 		       | Requires Licensing               |   
+
 However, Minitab remains useful for tasks like hypothesis testingm ANOVA, and control charting, complementing SQL for specific statistical needs.
 
 ---
