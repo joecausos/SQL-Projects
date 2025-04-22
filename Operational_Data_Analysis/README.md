@@ -1,4 +1,4 @@
-# Service Data Analysis with Six Sigma Methodology
+# Operational Data Analysis with Six Sigma Methodology
 
 This project applies Six Sgima principles to analyze  customer service-related data using SQL. By examining field returns, failures, and customer behaviors, we aim to uncover key insights that improve product quality and customer satisfaction while reducing field failures. This analysis follows the Six Sigma DMAIC framework: Define, Measure, Analyze, Improve, and Control.
 
