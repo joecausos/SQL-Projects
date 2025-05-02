@@ -95,7 +95,7 @@ The project addresses the following key questions, categorized by the complexity
 ### Basic SQL Analysis
 
 1. **What is the "Unverified Issue Cases (UIC) rate?**
-
+   <br>
    Purpose: To measure inefficiencies in the return process by identifying returns labeled as "Unverified Issue Cases".
 
    **EXPECTED RESULT:**
@@ -117,8 +117,8 @@ The project addresses the following key questions, categorized by the complexity
    ```
    **After understanding the UIC rate, the next step is to evaluate failure trends over time to assess whether quality improvements are effective.**
 
-2. **WHat are the field failure trends over time?**
-
+3. **WHat are the field failure trends over time?**
+   <br>
    Purpose: To identify seasonal patterns or long-term trends in failure rates, aiding in quality improvement efforts.
 
    **EXPECTED RESULT:**
@@ -169,6 +169,7 @@ The project addresses the following key questions, categorized by the complexity
    **With the failure trends established, focus shifts to understand the External Impact Cases (EIC) to identify potential issues.**
 
 4. **WHat is the rate of External Impact Case (EIC)?**
+   <br>
    Purpose: To measure the percentage of returns caused by external impact misuse, highlighting potential exchange of best practices or product design changes.
 
    **EXPECTED REUSLT:**
@@ -193,7 +194,8 @@ The project addresses the following key questions, categorized by the complexity
    ```
    Understanding External Issue EIC rates sets the stage for analyzing recurring returns, which can highlight systemic quality issues.
 
-5. **Are there repeat return for the same device based on device id**
+6. **Are there repeat return for the same device based on device id**
+   <br>
    Purpose: To identify recurring defects or systemic issues in product quality by analyzing device id with muutiple returns.
 
    **EXPECTED RESULT:**
@@ -238,7 +240,8 @@ The project addresses the following key questions, categorized by the complexity
    ```
    **After identifying recurring returns, we next evaluate early failures, which are strong indicators of product quality issues.**
 
-6. **What is the rate of early field failures?**
+7. **What is the rate of early field failures?**
+   <br>
    Purpose: To quantify early failures and assess assembly or design defects within the first 90 days of use.
 
    **EXPECTED RESULT:**
@@ -262,7 +265,8 @@ The project addresses the following key questions, categorized by the complexity
    ```
    **After early failures have been assessed, the next focus is on calculating the Mean Time Between Failures (MTBF) to understand product reliability.**
 
-7. **What is the Mean Time Between Failures (MTBF)?**
+8. **What is the Mean Time Between Failures (MTBF)?**
+   <br>
    Purpose: To calculate the average time between failures for devices, a critical metric for reliability and warranty policies.
 
    **EXPECTED RESULT:**
@@ -283,41 +287,178 @@ The project addresses the following key questions, categorized by the complexity
 
 
 ### Intermediate SQL Analysis
-1. What is the cumulative failure rate over time?
-2. What are the top 10 failure description by frequency?
-3. Which customer ares responsible for the highest return rates?
-4. What is the average time to finish device service by failure type?
-5. How do warranty claims difer by product category?
+1. **What is the cumulative failure rate over time?**
+   <br>
+   Purpose: To calculate how failure rates accumulate over time, providing insights into overall trends and their impact.
+   
+   ```sql
+   SELECT
+   	request_date,
+   	SUM(CASE WHEN rma_remarks = '4-FAIL<90' THEN 1 ELSE 0 END) 
+        OVER (ORDER BY request_date) * 100.0 / COUNT(*) 
+        OVER () AS cumulative_failure_rate
 
+   FROM
+   	staging_table st;
+   ```
+   
+2. **What are the top 10 failure description by frequency?**
+   <br>
+   Purpose: To identify and prioritize the most frequent failure types for targeted quality improvement efforts.
+
+   ```sql
+   SELECT
+   	field_failure,
+   	COUNT(*) AS frequency
+   FROM
+   	staging_table st
+   GROUP BY
+   	field_failure
+   ORDER BY
+   	frequency DESC
+   LIMIT 10;
+   ```
+   
+3. **Which customer ares responsible for the highest return rates?**
+   <br>
+   Purpose: To identify customers contributing the most to returns, enabling targeted interventions like education or support.
+
+   ```sql
+   SELECT
+   	device_id,
+   	COUNT(*) AS return_count
+   FROM
+   	staging_table st
+   GROUP BY
+   	customer_id
+   ORDER BY
+   	return_count DESC
+   LIMIT 10;
+   ```	   
+
+5. **What is the average time to finish device service by failure type?**
+   <br>
+   Purpose: To evaluate repair efficiency and identify failure types that require process optimization.
+   
+   ```sql
+   SELECT
+   	failure_description,
+    	AVG(repair_end_date - repair_start_date) AS avg_repair_time
+
+   FROM
+   	staging_table st
+   WHERE
+   	repair_start_date IS NOT NULL AND repair_end_date IS NOT NULL
+   GROUP BY
+   	failure_description
+   ORDER BY
+   	avg_repair_time DESC;
+   ```
+
+6. **How do warranty claims difer by product category?**
+   <br>
+   Purpose: To analyze warranty claims by product category, providing insights into product performance and warranty effectiveness.
+   
+   ```sql
+   SELECT
+   	product_category,
+   	COUNT(*) AS total_claims,
+   	COUNT(CASE WHEN warranty_status = 'Active' THEN 1 END) AS active_warranty_claims
+
+   FROM
+   	db_bounce_1NF
+   GROUP BY
+   	product_category;
 
 ### Advance SQL Analysis
-1. What is the pareto analysis of failure types?
-2. What is the trend of failure rates using a rolling average?
-3. Which failure type have the highest correlation with early failures?
-4. How can we identify seasonal patterns in failure trends?
+1. **What is the pareto analysis of failure types?**
+   <br>
+   Purpose: To perform Pareto analysis, identifying the failure types that contribute to 80% of the issues based on the Pareto principle.
 
+   ```sql
+   WITH FailureCounts AS (
+   	SELECT
+   		field_failure,
+   		COUNT (*) AS frequency
 
+   	FROM
+   		staging_stable st
+   	GROUP BY
+   		field_failure
+   ),
 
+   CumulativeFailures AS (
+   	SELECT
+   		field_failure,
+   		frequency,
+   		SUM(frequency) OVER (ORDER BY frequency DESC) * 100.0 /
+   		(SELECT SUM(frequency) FROM FailureCounts) AS cumulative_percentage
 
+   	FROM
+    		FailureCounts
+   )
 
+   	SELECT
+   		field_failure,
+   		frequency,
+   		cumulative_percentage
 
+   	FROM
+   		CumulativeFailures
+   	WHERE
+   		cumulative_percentage <= 80;
+	
+   ```
 
+   
+2. **What is the trend of failure rates using a rolling average?**
+   <br>
+   Purpose: To calculate rolling averages for failure rates, providing a smoothed trend analysis.
+   
+   ```sql
+   SELECT
+   	request_date,
+   	AVG(CASE WHEN rma_remarks = '4-FAIL<90' THEN 1 ELSE 0 END)
+   	OVER (ORDER BY request_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+   	AS rolling_failure_rate
+   FROM
+   	staging_table st;
 
+   ```
 
+  
+3. **Which failure type have the highest correlation with early failures?**
+   <br>
+   Purpose: To identify failure types strongly associated with early failures, highlighting potential manufacturing defects.
 
+   ```sql
+   SELECT
+   	field_failure,
+    	COUNT(CASE WHEN EXTRACT(DAY FROM request_date - mb_birth_year) <= 90 THEN 1 END) * 100.0 / COUNT(*) AS early_failure_correlation
 
+   FROM
+   	staging_table st
+   GROUP BY 
+   	field_failure
+   ORDER by
+   	early_failure_correlation DESC;
 
+   ```
 
+  
+4. **How can we identify seasonal patterns in failure trends?&**
+   <br>
+   Purpose: To analyze seasonal patterns in failures, optimizing production planning and resource allocation.
+   ```sql
+   SELECT
+   	EXTRACT(MONTH FROM request_date) AS month,
+   	COUNT(*) AS failure_count
 
-
-
-
-
-
-
-
-
-
-
-
+   FROM
+   	staging_table
+   GROUP BY
+   	month
+   ORDER BY
+   	month;
+   ```
 
