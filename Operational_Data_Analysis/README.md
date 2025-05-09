@@ -4,6 +4,10 @@ This project applies Six Sgima principles to analyze  customer service-related d
 
 ---
 
+![Process Flow](/Operational_Data_Analysis/process_flow.jpg) 
+
+---
+
 ## Table of Contents
 1. [Project Purpose](#project-purpose)
 2. [Six Sigma and SQL: Why Use Them?](#six-sigma-and-sql-why-use-them)
