@@ -1,0 +1,794 @@
+﻿country_id,county,city,state,postal_code
+1,Ada,Boise,ID,83706
+2,Adams,Washtucna,WA,99371
+3,Adams,Ritzville,WA,99169
+4,Adams,Lind,WA,99341
+5,Adams,Hatton,WA,99344
+6,Alameda,Alameda,CA,94501
+7,Alameda,Fremont,CA,94538
+8,Alameda,Dublin,CA,94568
+9,Alameda,Berkeley,CA,94707
+10,Alexandria,Alexandria,VA,22314
+11,Allegheny,Pittsburgh,PA,15222
+12,Allen,Fort Wayne,IN,46802
+13,Anchorage,Eagle River,AK,99577
+14,Anne Arundel,Gambrills,MD,21054
+15,Anne Arundel,Annapolis,MD,21401
+16,Anne Arundel,Edgewater,MD,21037
+17,Anne Arundel,Hanover,MD,21076
+18,Anne Arundel,Odenton,MD,21113
+19,Anne Arundel,Fort George G Meade,MD,20755
+20,Arapahoe,Englewood,CO,80111
+21,Asotin,Clarkston,WA,99403
+22,Asotin,Asotin,WA,99402
+23,Atlantic,Egg Harbor Township,NJ,8234
+24,Autauga,Prattville,AL,36067
+25,Baltimore,Baltimore,MD,21230
+26,Bannock,Pocatello,ID,83202
+27,Beaufort,Okatie,SC,29909
+28,Bell,Killeen,TX,76549
+29,Benton,Richland,WA,99352
+30,Benton,Kennewick,WA,99338
+31,Benton,Prosser,WA,99350
+32,Benton,West Richland,WA,99353
+33,Benton,Benton City,WA,99320
+34,Benton,Pros,WA,99350
+35,Benton,Wrch,WA,99353
+36,Benton,Rich,WA,99352
+37,Benton,Bentonville,AR,72713
+38,Benton,Plymouth,WA,99346
+39,Benton,Paterson,WA,99345
+40,Berkeley,Hanahan,SC,29410
+41,Bexar,Jbsa Lackland,TX,78236
+42,Bexar,San Antonio,TX,78258
+43,Bexar,Jbsa Ft Sam Houston,TX,78234
+44,Bexar,Converse,TX,78109
+45,Brevard,Melbourne,FL,32904
+46,Bristol,North Dartmouth,MA,2747
+47,Burlington,Joint Base Mdl,NJ,8641
+48,Caddo,Shreveport,LA,71115
+49,Calvert,Chesapeake Beach,MD,20732
+50,Camden,Saint Marys,GA,31558
+51,Camden,Camden,NJ,8103
+52,Carroll,Westminster,MD,21157
+53,Charles,Hughesville,MD,20637
+54,Charles,Waldorf,MD,20603
+55,Charleston,Charleston Afb,SC,29404
+56,Charlottesville,Charlottesville,VA,22901
+57,Chelan,Wenatchee,WA,98801
+58,Chelan,Leavenworth,WA,98826
+59,Chelan,Chelan,WA,98816
+60,Chelan,Cashmere,WA,98815
+61,Chelan,Manson,WA,98831
+62,Chelan,Entiat,WA,98822
+63,Chelan,Malaga,WA,98828
+64,Chelan,Holden Village,WA,98816
+65,Chelan,Chelan Falls,WA,98817
+66,Chelan,Peshastin,WA,98847
+67,Chelan,Monitor,WA,98836
+68,Chelan,Dryden,WA,98821
+69,Chesapeake,Chesapeake,VA,23321
+70,Chesterfield,North Chesterfield,VA,23236
+71,Christian,Ozark,MO,65721
+72,Churchill,Fallon,NV,89406
+73,Clackamas,Gladstone,OR,97027
+74,Clallam,Sequim,WA,98382
+75,Clallam,Port Angeles,WA,98362
+76,Clallam,Forks,WA,98331
+77,Clallam,Clallam Bay,WA,98326
+78,Clallam,Neah Bay,WA,98357
+79,Clallam,Sekiu,WA,98381
+80,Clallam,Beaver,WA,98305
+81,Clark,Vancouver,WA,98685
+82,Clark,Camas,WA,98607
+83,Clark,Brush Prairie,WA,98606
+84,Clark,Ridgefield,WA,98642
+85,Clark,Yacolt,WA,98675
+86,Clark,Battle Ground,WA,98604
+87,Clark,Washougal,WA,98671
+88,Clark,La Center,WA,98629
+89,Clark,North Las Vegas,NV,89084
+90,Clark,Henderson,NV,89044
+91,Clark,Las Vegas,NV,89145
+92,Clay,Middleburg,FL,32068
+93,Cobb,Marietta,GA,30068
+94,Collin,Plano,TX,75024
+95,Collin,Melissa,TX,75454
+96,Collin,Frisco,TX,75034
+97,Columbia,Dayton,WA,99328
+98,Contra Costa,Martinez,CA,94553
+99,Contra Costa,Bay Point,CA,94565
+100,Contra Costa,Lafayette,CA,94549
+101,Cook,Streamwood,IL,60107
+102,Cook,Skokie,IL,60077
+103,Cook,Chicago,IL,60607
+104,Cowlitz,Kelso,WA,98626
+105,Cowlitz,Silverlake,WA,98645
+106,Cowlitz,Kalama,WA,98625
+107,Cowlitz,Woodland,WA,98674
+108,Cowlitz,Longview,WA,98632
+109,Cowlitz,Castle Rock,WA,98611
+110,Cowlitz,Ariel,WA,98603
+111,Cowlitz,Amboy,WA,98601
+112,Cowlitz,Toutle,WA,98649
+113,Cowlitz,Ryderwood,WA,98581
+114,Cowlitz,Cougar,WA,98616
+115,Cowlitz,Silver Lake,WA,98645
+116,Cumberland,Fort Bragg,NC,28307
+117,Cumberland,Fayetteville,NC,28306
+118,Cumberland,Mechanicsburg,PA,17050
+119,Currituck,Moyock,NC,27958
+120,Cuyahoga,Westlake,OH,44145
+121,Dallas,Dallas,TX,75208
+122,Davidson,Nashville,TN,37204
+123,DeKalb,Decatur,GA,30030
+124,DeKalb,Atlanta,GA,30316
+125,Denver,Denver,CO,80206
+126,District of Columbia,Washington,DC,20003
+127,DoÃ±a Ana,Las Cruces,NM,88012
+128,Douglas,East Wenatchee,WA,98802
+129,Douglas,Waterville,WA,98858
+130,Douglas,Orondo,WA,98843
+131,Douglas,Palisades,WA,98845
+132,Douglas,Mansfield,WA,98812
+133,Douglas,Omaha,NE,68135
+134,Douglas,Rock Island,WA,98850
+135,Douglas,Bridgeport,WA,98813
+136,Douglas,Bridgeport Bar,WA,98812
+137,Douglas,Grand Coulee,WA,99133
+138,Duval,Jacksonville,FL,32233
+139,El Paso,Colorado Springs,CO,80924
+140,El Paso,El Paso,TX,79938
+141,El Paso,Monument,CO,80132
+142,Escambia,Pensacola,FL,32526
+143,Essex,Bloomfield,NJ,7003
+144,Essex,Montclair,NJ,7042
+145,Fairfax,Vienna,VA,22180
+146,Fairfax,Burke,VA,22015
+147,Fairfax,Mc Lean,VA,22101
+148,Fairfax,Fort Belvoir,VA,22060
+149,Fairfax,Reston,VA,20190
+150,Falls Church,Falls Church,VA,22046
+151,Ferry,Republic,WA,99166
+152,Ferry,Curlew,WA,99118
+153,Ferry,Danville,WA,99121
+154,Forsyth,Cumming,GA,30041
+155,Franklin,Pasco,WA,99301
+156,Franklin,Othello,WA,99344
+157,Franklin,Connell,WA,99326
+158,Franklin,Mesa,WA,99343
+159,Franklin,Eltopia,WA,99330
+160,Franklin,Pasc,WA,99301
+161,Frederick,Frederick,MD,21701
+162,Fresno,Fresno,CA,93723
+163,Galveston,League City,TX,77573
+164,Garfield,Pomeroy,WA,99347
+165,Garfield,Enid,OK,73703
+166,Geary,Fort Riley,KS,66442
+167,Geary,Junction City,KS,66441
+168,Grant,Coulee City,WA,99115
+169,Grant,Moses Lake,WA,98837
+170,Grant,Mattawa,WA,99349
+171,Grant,Ephrata,WA,98823
+172,Grant,Quincy,WA,98848
+173,Grant,Warden,WA,98857
+174,Grant,Soap Lake,WA,98851
+175,Grant,Royal City,WA,99357
+176,Grant,Electric City,WA,99123
+177,Grant,Stratford,WA,98853
+178,Grant,Hartline,WA,99135
+179,Grant,Marlin,WA,98832
+180,Grant,Lakeview,WA,98851
+181,Grays Harbor,Aberdeen,WA,98520
+182,Grays Harbor,Oakville,WA,98568
+183,Grays Harbor,Montesano,WA,98563
+184,Grays Harbor,Cosmopolis,WA,98537
+185,Grays Harbor,Ocean Shores,WA,98569
+186,Grays Harbor,Pacific Beach,WA,98571
+187,Grays Harbor,Mccleary,WA,98557
+188,Grays Harbor,Westport,WA,98595
+189,Grays Harbor,Grayland,WA,98547
+190,Grays Harbor,Hoquiam,WA,98550
+191,Grays Harbor,Taholah,WA,98587
+192,Grays Harbor,Copalis Crossing,WA,98536
+193,Grays Harbor,Quinault,WA,98575
+194,Grays Harbor,Amanda Park,WA,98526
+195,Grays Harbor,Moclips,WA,98562
+196,Grays Harbor,Copalis Beach,WA,98535
+197,Greene,Beavercreek,OH,45430
+198,Gwinnett,Suwanee,GA,30024
+199,Hamilton,Cincinnati,OH,45243
+200,Hamilton,Westfield,IN,46074
+201,Hardin,Rineyville,KY,40162
+202,Harford,Aberdeen Proving Ground,MD,21005
+203,Harford,Gunpowder,MD,21010
+204,Harnett,Cameron,NC,28326
+205,Harnett,Spring Lake,NC,28390
+206,Harnett,Bunnlevel,NC,28323
+207,Harris,Baytown,TX,77521
+208,Harris,Houston,TX,77002
+209,Hartford,Newington,CT,6111
+210,Hennepin,Minneapolis,MN,55408
+211,Henrico,Henrico,VA,23231
+212,Hillsborough,Tampa,FL,33612
+213,Hoke,Raeford,NC,28376
+214,Honolulu,Honolulu,HI,96818
+215,Honolulu,Ewa Beach,HI,96706
+216,Horry,Myrtle Beach,SC,29579
+217,Houston,Warner Robins,GA,31098
+218,Howard,Ellicott City,MD,21042
+219,Howard,Woodbine,MD,21797
+220,Hudson,Harrison,NJ,7029
+221,Island,Oak Harbor,WA,98277
+222,Island,Freeland,WA,98249
+223,Island,Langley,WA,98260
+224,Island,Coupeville,WA,98239
+225,Island,Greenbank,WA,98253
+226,Island,Camano Island,WA,98282
+227,Island,Clinton,WA,98236
+228,Isle of Wight,Carrollton,VA,23314
+229,Jackson,Ocean Springs,MS,39564
+230,James City,Toano,VA,23168
+231,Jefferson,Port Ludlow,WA,98365
+232,Jefferson,Port Townsend,WA,98368
+233,Jefferson,Nordland,WA,98358
+234,Jefferson,Brinnon,WA,98320
+235,Jefferson,Port Hadlock,WA,98339
+236,Jefferson,Quilcene,WA,98376
+237,Jefferson,Chimacum,WA,98325
+238,Jefferson,Watertown,NY,13603
+239,Jefferson,Evans Mills,NY,13637
+240,Jefferson,Gardiner,WA,98382
+241,Johnson,Warrensburg,MO,64093
+242,Kauai,Kekaha,HI,96752
+243,Kent,Greene,RI,2827
+244,Kern,Edwards,CA,93523
+245,King,Seattle,WA,98125
+246,King,Kent,WA,98042
+247,King,Issaquah,WA,98029
+248,King,Burien,WA,98168
+249,King,Redmond,WA,98052
+250,King,Shoreline,WA,98177
+251,King,Seatac,WA,98148
+252,King,Sammamish,WA,98074
+253,King,Bellevue,WA,98005
+254,King,Kenmore,WA,98028
+255,King,Renton,WA,98055
+256,King,Medina,WA,98039
+257,King,Auburn,WA,98092
+258,King,Vashon,WA,98070
+259,King,Kirkland,WA,98034
+260,King,Federal Way,WA,98003
+261,King,Tukwila,WA,98178
+262,King,Covington,WA,98042
+263,King,Newcastle,WA,98056
+264,King,Woodinville,WA,98072
+265,King,North Bend,WA,98045
+266,King,Des Moines,WA,98198
+267,King,Pacific,WA,98047
+268,King,Duvall,WA,98019
+269,King,Lake Forest Park,WA,98155
+270,King,Normandy Park,WA,98166
+271,King,Clyde Hill,WA,98004
+272,King,Algona,WA,98001
+273,King,Enumclaw,WA,98022
+274,King,Beaux Arts,WA,98004
+275,King,Mercer Island,WA,98040
+276,King,Skykomish,WA,98288
+277,King,Maple Valley,WA,98038
+278,King,Milton,WA,98354
+279,King,Black Diamond,WA,98010
+280,King,Snoqualmie,WA,98065
+281,King,Carnation,WA,98014
+282,King,Yarrow Point,WA,98004
+283,King,Hunts Point,WA,98004
+284,King,Fall City,WA,98024
+285,King,Ravensdale,WA,98051
+286,King,Preston,WA,98050
+287,King,Baring,WA,98224
+288,Kings,Hanford,CA,93230
+289,Kings,Brooklyn,NY,11209
+290,Kings,Lemoore,CA,93245
+291,Kitsap,Kingston,WA,98346
+292,Kitsap,Silverdale,WA,98383
+293,Kitsap,Poulsbo,WA,98370
+294,Kitsap,Bremerton,WA,98312
+295,Kitsap,Port Orchard,WA,98367
+296,Kitsap,Olalla,WA,98359
+297,Kitsap,Bainbridge Island,WA,98110
+298,Kitsap,Indianola,WA,98342
+299,Kitsap,Seabeck,WA,98380
+300,Kitsap,Suquamish,WA,98392
+301,Kitsap,Keyport,WA,98345
+302,Kitsap,Gig Harbor,WA,98329
+303,Kitsap,Hansville,WA,98340
+304,Kitsap,Pouslbo,WA,98370
+305,Kitsap,Port Gamble,WA,98370
+306,Kittitas,Ellensburg,WA,98926
+307,Kittitas,Cle Elum,WA,98922
+308,Kittitas,Snoqualmie Pass,WA,98068
+309,Kittitas,Ronald,WA,98940
+310,Kittitas,Vantage,WA,98950
+311,Kittitas,Kittitas,WA,98934
+312,Kittitas,Roslyn,WA,98941
+313,Kittitas,Thorp,WA,98946
+314,Kittitas,Easton,WA,98925
+315,Kittitas,South Cle Elum,WA,98943
+316,Klickitat,White Salmon,WA,98672
+317,Klickitat,Goldendale,WA,98620
+318,Klickitat,Bingen,WA,98605
+319,Klickitat,Murdock,WA,98617
+320,Klickitat,Bz Corner,WA,98672
+321,Klickitat,Trout Lake,WA,98650
+322,Klickitat,Husum,WA,98672
+323,Klickitat,Alderdale,WA,99350
+324,Klickitat,Snowden,WA,98672
+325,Klickitat,Dallesport,WA,98617
+326,Klickitat,Lyle,WA,98635
+327,Klickitat,Klickitat,WA,98628
+328,Klickitat,Centerville,WA,98613
+329,Klickitat,Wahkiacus,WA,98670
+330,Klickitat,Maryhill,WA,98620
+331,Klickitat,Bickleton,WA,99322
+332,Klickitat,Wishram,WA,98673
+333,Klickitat,Glenwood,WA,98619
+334,Klickitat,Appleton,WA,98635
+335,Klickitat,Roosevelt,WA,98620
+336,Klickitat,Northwestern Lake,WA,98672
+337,Kootenai,Worley,ID,83876
+338,Kootenai,Post Falls,ID,83854
+339,Lake,Mundelein,IL,60060
+340,Lake,Libertyville,IL,60048
+341,Lake,Highland Park,IL,60035
+342,Lane,Springfield,OR,97477
+343,Laramie,Cheyenne,WY,82001
+344,Larimer,Timnath,CO,80547
+345,Leavenworth,Fort Leavenworth,KS,66027
+346,Lee,Smiths Station,AL,36877
+347,Lewis,Winlock,WA,98596
+348,Lewis,Chehalis,WA,98532
+349,Lewis,Morton,WA,98356
+350,Lewis,Onalaska,WA,98570
+351,Lewis,Ashford,WA,98304
+352,Lewis,Toledo,WA,98591
+353,Lewis,Mossyrock,WA,98564
+354,Lewis,Ethel,WA,98532
+355,Lewis,Silver Creek,WA,98585
+356,Lewis,Randle,WA,98377
+357,Lewis,Curtis,WA,98538
+358,Lewis,Mineral,WA,98355
+359,Lewis,Vader,WA,98593
+360,Lewis,Packwood,WA,98361
+361,Lewis,Salkum,WA,98582
+362,Lewis,Cinebar,WA,98533
+363,Lewis,Glenoma,WA,98336
+364,Lewis,Napavine,WA,98565
+365,Lewis,Pe Ell,WA,98572
+366,Lewis,Galvin,WA,98544
+367,Liberty,Hinesville,GA,31313
+368,Lincoln,Davenport,WA,99122
+369,Lincoln,Odessa,WA,99159
+370,Lincoln,Seven Bays,WA,99122
+371,Lincoln,Wilbur,WA,99185
+372,Lincoln,Harrington,WA,99134
+373,Lincoln,Lincoln,WA,99147
+374,Lincoln,Ford,WA,99013
+375,Lincoln,Sprague,WA,99032
+376,Lincoln,Creston,WA,99117
+377,Lincoln,Deer Meadows,WA,99122
+378,Lincoln,Almira,WA,99103
+379,Los Angeles,Los Angeles,CA,90015
+380,Los Angeles,Torrance,CA,90504
+381,Los Angeles,Gardena,CA,90249
+382,Los Angeles,Arcadia,CA,91006
+383,Los Angeles,Lancaster,CA,93536
+384,Los Angeles,Pacific Palisades,CA,90272
+385,Loudoun,Aldie,VA,20105
+386,Loudoun,Ashburn,VA,20148
+387,Loudoun,Chantilly,VA,20152
+388,Macomb,Warren,MI,48092
+389,Madison,Saint Jacob,IL,62281
+390,Manassas,Manassas,VA,20110
+391,Maricopa,Phoenix,AZ,85086
+392,Maricopa,Tempe,AZ,85281
+393,Maricopa,Scottsdale,AZ,85255
+394,Maricopa,Peoria,AZ,85383
+395,Marin,San Rafael,CA,94901
+396,Marin,Mill Valley,CA,94941
+397,Marin,Belvedere Tiburon,CA,94920
+398,Mason,Belfair,WA,98528
+399,Mason,Allyn,WA,98524
+400,Mason,Tahuya,WA,98588
+401,Mason,Grapeview,WA,98546
+402,Mason,Elma,WA,98541
+403,Mason,Shelton,WA,98584
+404,Mason,Union,WA,98592
+405,Mason,Hoodsport,WA,98548
+406,Mason,Lilliwaup,WA,98555
+407,Maui,Kihei,HI,96753
+408,Meade,Fort Knox,KY,40121
+409,Mercer,Princeton,NJ,8540
+410,Miami-Dade,Coral Gables,FL,33146
+411,Miami-Dade,Hialeah,FL,33018
+412,Middlesex,Cambridge,MA,2139
+413,Middlesex,East Hampton,CT,6424
+414,Middlesex,Winchester,MA,1890
+415,Middlesex,Hanscom Afb,MA,1731
+416,Monterey,Seaside,CA,93955
+417,Monterey,Monterey,CA,93940
+418,Monterey,Marina,CA,93933
+419,Monterey,Pacific Grove,CA,93950
+420,Montgomery,Pike Road,AL,36064
+421,Montgomery,Germantown,MD,20874
+422,Montgomery,Bethesda,MD,20814
+423,Montgomery,Dresher,PA,19025
+424,Montgomery,Montgomery,AL,36112
+425,Montgomery,Gaithersburg,MD,20878
+426,Montgomery,Silver Spring,MD,20906
+427,Montgomery,Conroe,TX,77304
+428,Montgomery,Potomac,MD,20854
+429,Moore,Carthage,NC,28327
+430,Moore,Vass,NC,28394
+431,Multnomah,Portland,OR,97214
+432,Muscogee,Fort Benning,GA,31905
+433,Muscogee,Columbus,GA,31907
+434,New Castle,Townsend,DE,19734
+435,New Haven,Madison,CT,6443
+436,New London,Norwich,CT,6360
+437,New London,Gales Ferry,CT,6335
+438,New London,Mystic,CT,6355
+439,New London,Waterford,CT,6385
+440,New London,Old Lyme,CT,6371
+441,New York,New York,NY,10023
+442,Newport,Middletown,RI,2842
+443,Norfolk,Norfolk,VA,23503
+444,Nueces,Corpus Christi,TX,78413
+445,Okaloosa,Niceville,FL,32578
+446,Okanogan,Brewster,WA,98812
+447,Okanogan,Oroville,WA,98844
+448,Okanogan,Riverside,WA,98849
+449,Okanogan,Twisp,WA,98856
+450,Okanogan,Methow,WA,98834
+451,Okanogan,Winthrop,WA,98862
+452,Okanogan,Tonasket,WA,98855
+453,Okanogan,Mazama,WA,98833
+454,Okanogan,Carlton,WA,98814
+455,Okanogan,Conconully,WA,98819
+456,Okanogan,Coulee Dam,WA,99116
+457,Okanogan,Omak,WA,98841
+458,Okanogan,Okanogan,WA,98840
+459,Okanogan,Nespelem,WA,99155
+460,Okanogan,Pateros,WA,98846
+461,Okanogan,Elmer City,WA,99124
+462,Okanogan,Malott,WA,98829
+463,Oldham,Goshen,KY,40026
+464,Orange,Irvine,CA,92602
+465,Orange,Trabuco Canyon,CA,92679
+466,Orange,Midway City,CA,92655
+467,Orange,Huntington Beach,CA,92648
+468,Orange,Orlando,FL,32808
+469,Orange,Lake Forest,CA,92630
+470,Orange,Maitland,FL,32751
+471,Orange,Ladera Ranch,CA,92694
+472,Orange,Laguna Niguel,CA,92677
+473,Orange,Winter Park,FL,32792
+474,Orange,Buena Park,CA,90620
+475,Orange,West Point,NY,10996
+476,Osceola,Kissimmee,FL,34747
+477,Otero,Holloman Air Force Base,NM,88330
+478,Pacific,Long Beach,WA,98631
+479,Pacific,Raymond,WA,98577
+480,Pacific,Ocean Park,WA,98640
+481,Pacific,Lebam,WA,98577
+482,Pacific,Menlo,WA,98577
+483,Pacific,Surfside,WA,98640
+484,Pacific,South Bend,WA,98586
+485,Pacific,Naselle,WA,98638
+486,Pacific,Ilwaco,WA,98624
+487,Pacific,North Cove,WA,98547
+488,Pacific,Seaview,WA,98644
+489,Pacific,Oysterville,WA,98640
+490,Pacific,Chinook,WA,98614
+491,Pacific,Tokeland,WA,98590
+492,Pacific,Smith Creek,WA,98577
+493,Pacific,Bay Center,WA,98527
+494,Pacific,Willapa,WA,98577
+495,Pacific,Nahcotta,WA,98640
+496,Palm Beach,Boca Raton,FL,33432
+497,Pend Oreille,Newport,WA,99156
+498,Pend Oreille,Ione,WA,99139
+499,Pend Oreille,Elk,WA,99009
+500,Pend Oreille,Cusick,WA,99119
+501,Pend Oreille,Usk,WA,99180
+502,Pend Oreille,Metaline,WA,99152
+503,Penobscot,Brewer,ME,4412
+504,Penobscot,Hampden,ME,4444
+505,Philadelphia,Philadelphia,PA,19149
+506,Pierce,Lakewood,WA,98498
+507,Pierce,Tacoma,WA,98445
+508,Pierce,Edgewood,WA,98372
+509,Pierce,Puyallup,WA,98371
+510,Pierce,Graham,WA,98338
+511,Pierce,Sumner,WA,98390
+512,Pierce,Orting,WA,98360
+513,Pierce,Bonney Lake,WA,98391
+514,Pierce,Fox Island,WA,98333
+515,Pierce,Fircrest,WA,98466
+516,Pierce,South Hill,WA,98374
+517,Pierce,Joint Base Lewis Mcchord,WA,98433
+518,Pierce,Parkland,WA,98446
+519,Pierce,Dupont,WA,98327
+520,Pierce,Spanaway,WA,98387
+521,Pierce,Roy,WA,98580
+522,Pierce,Lake Tapps,WA,98391
+523,Pierce,Anderson Island,WA,98303
+524,Pierce,Buckley,WA,98321
+525,Pierce,South Prairie,WA,98385
+526,Pierce,Steilacoom,WA,98388
+527,Pierce,Carbonado,WA,98323
+528,Pierce,Eatonville,WA,98328
+529,Pierce,University Place,WA,98466
+530,Pierce,Lakebay,WA,98349
+531,Pierce,Vaughn,WA,98394
+532,Pierce,Fife,WA,98424
+533,Pierce,Ruston,WA,98407
+534,Pierce,Wilkeson,WA,98396
+535,Pierce,Elbe,WA,98330
+536,Pierce,Artondale,WA,98335
+537,Pierce,Kapowsin,WA,98344
+538,Pierce,Longbranch,WA,98351
+539,Pierce,McChord AFB,WA,98439
+540,Pierce,Incorporated,WA,98499
+541,Pima,Tucson,AZ,85718
+542,Pinal,Apache Junction,AZ,85119
+543,Pinal,Maricopa,AZ,85138
+544,Placer,Roseville,CA,95747
+545,Plaquemines,Belle Chasse,LA,70037
+546,Polk,Salem,OR,97304
+547,Portsmouth,Portsmouth,VA,23707
+548,Prince George,Fort Lee,VA,23801
+549,Prince George,Fort Gregg Adams,VA,23801
+550,Prince George's,Fort Washington,MD,20744
+551,Prince George's,Upper Marlboro,MD,20774
+552,Prince George's,Andrews Air Force Base,MD,20762
+553,Prince William,Dumfries,VA,22026
+554,Providence,Providence,RI,2909
+555,Pulaski,Sherwood,AR,72120
+556,Pulaski,Waynesville,MO,65583
+557,Pulaski,Saint Robert,MO,65584
+558,Richmond,Richmond,VA,23224
+559,Richmond,Augusta,GA,30909
+560,Riverside,Murrieta,CA,92563
+561,Riverside,Menifee,CA,92585
+562,Riverside,Cathedral City,CA,92234
+563,Riverside,Wildomar,CA,92595
+564,Rockdale,Conyers,GA,30013
+565,Rockingham,Epping,NH,3042
+566,Sacramento,Folsom,CA,95630
+567,Sacramento,Sacramento,CA,95833
+568,San Bernardino,Fort Irwin,CA,92310
+569,San Diego,San Diego,CA,92127
+570,San Diego,Carlsbad,CA,92011
+571,San Diego,Coronado,CA,92118
+572,San Diego,Chula Vista,CA,91913
+573,San Diego,La Mesa,CA,91942
+574,San Diego,Oceanside,CA,92058
+575,San Diego,Lakeside,CA,92040
+576,San Diego,El Cajon,CA,92021
+577,San Diego,Encinitas,CA,92024
+578,San Diego,San Clemente,CA,92672
+579,San Francisco,San Francisco,CA,94132
+580,San Juan,Lopez Island,WA,98261
+581,San Juan,Eastsound,WA,98245
+582,San Juan,Friday Harbor,WA,98250
+583,San Juan,Waldron,WA,98297
+584,San Juan,Olga,WA,98279
+585,San Juan,Lopez Is,WA,98261
+586,San Juan,Shaw Island,WA,98286
+587,San Juan,Orcas,WA,98280
+588,San Juan,San Juan Is,WA,98250
+589,San Juan,Orcas Is,WA,98245
+590,San Juan,Deer Harbor,WA,98243
+591,San Mateo,Redwood City,CA,94063
+592,San Mateo,Pacifica,CA,94044
+593,Santa Clara,Palo Alto,CA,94303
+594,Santa Clara,Cupertino,CA,95014
+595,Santa Clara,Mountain View,CA,94040
+596,Santa Clara,San Jose,CA,95116
+597,Santa Clara,Santa Clara,CA,95051
+598,Santa Clara,Sunnyvale,CA,94086
+599,Sarasota,Sarasota,FL,34242
+600,Saratoga,Saratoga Springs,NY,12866
+601,Saratoga,Greenfield Center,NY,12833
+602,Sedgwick,Derby,KS,67037
+603,Shelby,Memphis,TN,38105
+604,Skagit,Burlington,WA,98233
+605,Skagit,Anacortes,WA,98221
+606,Skagit,Mount Vernon,WA,98274
+607,Skagit,Sedro-Woolley,WA,98284
+608,Skagit,Bow,WA,98232
+609,Skagit,La Conner,WA,98257
+610,Skagit,Clearlake,WA,98235
+611,Skagit,Concrete,WA,98237
+612,Skagit,Hamilton,WA,98255
+613,Skagit,Rockport,WA,98283
+614,Skagit,Lyman,WA,98263
+615,Skagit,Marblemount,WA,98267
+616,Skamania,North Bonneville,WA,98639
+617,Skamania,Underwood,WA,98651
+618,Skamania,Stevenson,WA,98648
+619,Skamania,Carson,WA,98610
+620,Snohomish,Lynnwood,WA,98036
+621,Snohomish,Mukilteo,WA,98275
+622,Snohomish,Bothell,WA,98012
+623,Snohomish,Snohomish,WA,98290
+624,Snohomish,Edmonds,WA,98020
+625,Snohomish,Monroe,WA,98272
+626,Snohomish,Brier,WA,98036
+627,Snohomish,Everett,WA,98208
+628,Snohomish,Mountlake Terrace,WA,98043
+629,Snohomish,Mill Creek,WA,98012
+630,Snohomish,Lake Stevens,WA,98258
+631,Snohomish,Marysville,WA,98270
+632,Snohomish,Arlington,WA,98223
+633,Snohomish,Stanwood,WA,98292
+634,Snohomish,Woodway,WA,98020
+635,Snohomish,Granite Falls,WA,98252
+636,Snohomish,Sultan,WA,98294
+637,Snohomish,Gold Bar,WA,98251
+638,Snohomish,Tulalip,WA,98271
+639,Snohomish,Index,WA,98256
+640,Snohomish,Darrington,WA,98241
+641,Snohomish,Martha Lake,WA,98087
+642,Snohomish,Startup,WA,98294
+643,Solano,Benicia,CA,94510
+644,Solano,Vacaville,CA,95688
+645,Solano,Travis Afb,CA,94535
+646,Sonoma,Santa Rosa,CA,95401
+647,Spokane,Spokane,WA,99205
+648,Spokane,Reardan,WA,99029
+649,Spokane,Spokane Valley,WA,99206
+650,Spokane,Airway Heights,WA,99001
+651,Spokane,Medical Lake,WA,99022
+652,Spokane,Chattaroy,WA,99003
+653,Spokane,Newman Lake,WA,99025
+654,Spokane,Colbert,WA,99005
+655,Spokane,Cheney,WA,99004
+656,Spokane,Mead,WA,99021
+657,Spokane,Liberty Lake,WA,99019
+658,Spokane,Spangle,WA,99031
+659,Spokane,Mica,WA,99023
+660,Spokane,Valleyford,WA,99036
+661,Spokane,Greenacres,WA,99016
+662,Spokane,Veradale,WA,99016
+663,Spokane,Rockford,WA,99030
+664,Spokane,Otis Orchards,WA,99027
+665,Spokane,Fairfield,WA,99012
+666,Spokane,Edwall,WA,99008
+667,Spokane,Fairchild Air Force Base,WA,99011
+668,Spokane,Latah,WA,99018
+669,St. Charles,O Fallon,MO,63368
+670,St. Louis,Saint Louis,MO,63139
+671,St. Louis,Ballwin,MO,63021
+672,St. Mary's,California,MD,20619
+673,St. Mary's,Lexington Park,MD,20653
+674,St. Mary's,Leonardtown,MD,20650
+675,Stafford,Fredericksburg,VA,22405
+676,Stafford,Stafford,VA,22556
+677,Stevens,Chewelah,WA,99109
+678,Stevens,Clayton,WA,99110
+679,Stevens,Nine Mile Falls,WA,99026
+680,Stevens,Colville,WA,99114
+681,Stevens,Deer Park,WA,99006
+682,Stevens,Kettle Falls,WA,99141
+683,Stevens,Evans,WA,99126
+684,Stevens,Gifford,WA,99131
+685,Stevens,Loon Lake,WA,99148
+686,Stevens,Hunters,WA,99137
+687,Stevens,Valley,WA,99181
+688,Stevens,Rice,WA,99167
+689,Stevens,Wellpinit,WA,99040
+690,Stevens,Tumtum,WA,99034
+691,Stevens,Springdale,WA,99173
+692,Stevens,Addy,WA,99101
+693,Stevens,Northport,WA,99157
+694,Suffolk,Boston,MA,2114
+695,Suffolk,Suffolk,VA,23435
+696,Sussex,Stanhope,NJ,7874
+697,Talladega,Talladega,AL,35160
+698,Tarrant,Bedford,TX,76022
+699,Tarrant,Southlake,TX,76092
+700,Texas,Summersville,MO,65571
+701,Thurston,Olympia,WA,98506
+702,Thurston,Yelm,WA,98597
+703,Thurston,Rainier,WA,98576
+704,Thurston,Lacey,WA,98503
+705,Thurston,Rochester,WA,98579
+706,Thurston,Tenino,WA,98589
+707,Thurston,Tumwater,WA,98512
+708,Thurston,Bucoda,WA,98530
+709,Thurston,Centralia,WA,98531
+710,Tooele,Tooele,UT,84074
+711,Travis,Austin,TX,78728
+712,Travis,Leander,TX,78641
+713,Ventura,Port Hueneme,CA,93041
+714,Ventura,Ventura,CA,93001
+715,Ventura,Camarillo,CA,93010
+716,Ventura,Moorpark,CA,93021
+717,Virginia Beach,Virginia Beach,VA,23455
+718,Wahkiakum,Rosburg,WA,98643
+719,Wahkiakum,Cathlamet,WA,98612
+720,Wahkiakum,Grays River,WA,98621
+721,Wahkiakum,Skamokawa,WA,98647
+722,Wake,Holly Springs,NC,27540
+723,Wake,Raleigh,NC,27617
+724,Wake,Morrisville,NC,27560
+725,Walla Walla,Walla Walla,WA,99362
+726,Walla Walla,College Place,WA,99324
+727,Walla Walla,Burbank,WA,99323
+728,Walla Walla,Touchet,WA,99360
+729,Walla Walla,Waitsburg,WA,99361
+730,Walla Walla,Walla Walla Co,WA,99362
+731,Walla Walla,Prescott,WA,99348
+732,Walla Walla,Dixie,WA,99329
+733,Wasco,The Dalles,OR,97058
+734,Washoe,Reno,NV,89511
+735,Washoe,Sparks,NV,89436
+736,Washtenaw,Ann Arbor,MI,48105
+737,Wayne,Taylor,MI,48180
+738,Whatcom,Bellingham,WA,98229
+739,Whatcom,Sumas,WA,98295
+740,Whatcom,Everson,WA,98247
+741,Whatcom,Point Roberts,WA,98281
+742,Whatcom,Lynden,WA,98264
+743,Whatcom,Blaine,WA,98230
+744,Whatcom,Lummi Island,WA,98262
+745,Whatcom,Maple Falls,WA,98266
+746,Whatcom,Nooksack,WA,98276
+747,Whatcom,Ferndale,WA,98248
+748,Whatcom,Sedro Woolley,WA,98284
+749,Whatcom,Glacier,WA,98244
+750,Whatcom,Deming,WA,98244
+751,Whatcom,Custer,WA,98240
+752,Whatcom,Acme,WA,98220
+753,Whitman,Pullman,WA,99163
+754,Whitman,Rosalia,WA,99170
+755,Whitman,Tekoa,WA,99033
+756,Whitman,Uniontown,WA,99113
+757,Whitman,Colfax,WA,99111
+758,Whitman,Palouse,WA,99161
+759,Whitman,Endicott,WA,99125
+760,Whitman,Oakesdale,WA,99158
+761,Whitman,Garfield,WA,99130
+762,Whitman,Colton,WA,99113
+763,Whitman,St John,WA,99171
+764,Whitman,Albion,WA,99102
+765,Whitman,Lamont,WA,99017
+766,Whitman,Farmington,WA,99128
+767,Whitman,Malden,WA,99149
+768,Whitman,Lacrosse,WA,99143
+769,Williamsburg,Williamsburg,VA,23185
+770,Williamson,Brentwood,TN,37027
+771,Wise,Alvord,TX,76225
+772,Yakima,Yakima,WA,98901
+773,Yakima,Wapato,WA,98951
+774,Yakima,Naches,WA,98937
+775,Yakima,Moxee,WA,98936
+776,Yakima,Selah,WA,98942
+777,Yakima,Tieton,WA,98947
+778,Yakima,Zillah,WA,98953
+779,Yakima,Grandview,WA,98930
+780,Yakima,Sunnyside,WA,98944
+781,Yakima,Granger,WA,98932
+782,Yakima,Toppenish,WA,98948
+783,Yakima,Mabton,WA,98935
+784,Yakima,Union Gap,WA,98903
+785,Yakima,Outlook,WA,98938
+786,Yakima,Cowiche,WA,98923
+787,Yakima,Parker,WA,98939
+788,Yakima,Buena,WA,98921
+789,Yakima,Harrah,WA,98933
+790,Yakima,White Swan,WA,98952
+791,York,Yorktown,VA,23691
+792,Yuba,Beale Afb,CA,95903
+793,Not Provided,Not Provided,NS,
